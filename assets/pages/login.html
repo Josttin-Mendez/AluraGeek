@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alura Geek | Iniciar sesión</title>
+  <link rel="stylesheet" href="../fonts/style.css">
+  <link rel="stylesheet" href="../css/login.css">
+  <link rel="icon" type="image/png" href="../images/logo-title.png">
+</head>
+<body>
+  <header>
+    <section class="header__upper container">
+      <div class="logo__container">
+        <h1 class="header__logo">
+          <a href="../../index.html">
+            <img src="../images/logo.svg" alt="Logotipo da AluraGeek">
+          </a>
+        </h1>
+        <div class="search__container">
+          <label for="search" class="sr-only"></label>
+          <input type="text" name="search" id="search" placeholder="¿Qué desea encontrar?" class="search__input">
+          <i class="icon-search search__icon"></i>
+        </div>
+      </div>
+      <i class="icon-search header__search" data-icon-search></i>
+      <i class="icon-close header__close" data-icon-search></i>
+    </section>
+  </header>
+  <main>
+    <form action="" class="login">
+      <fieldset class="login__container">
+        <legend class="login__title">Iniciar sesión</legend>
+        <label for="email" class="sr-only">Email</label>
+        <input type="email" id="email" class="login__email main-input" placeholder="Email" required>
+        <label for="email" class="sr-only">Contraseña</label>
+        <input type="password" id="password" class="login__password main-input" placeholder="Contraseña" required>
+        <button class="login__button main-button" data-button-submit>Entrar</button>
+      </fieldset>
+    </form>
+  </main>
+  <footer>
+    <section class="contact container">
+        <img src="../images/logo.svg" alt="Logotipo da AluraGeek" class="contact__logo">
+        <ul class="contact__list">
+          <li class="contact__link">
+            <a href="#">Sobre nosotros</a>
+          </li>
+          <li class="contact__link">
+            <a href="#">Política de privacidad</a>
+          </li>
+          <li class="contact__link">
+            <a href="#">Programa de fidelidad</a>
+          </li>
+          <li class="contact__link">
+            <a href="#">Nuestras tiendas</a>
+          </li>
+          <li class="contact__link">
+            <a href="#">Quiero ser franquiciado</a>
+          </li>
+          <li class="contact__link">
+            <a href="#">Anuncie aqui</a>
+          </li>
+        </ul>
+      <form action="" method="post">
+        <fieldset class="contact__form">
+          <legend class="form__title">Contactanos</legend>
+          <div class="input__container">
+            <input type="text" class="form__input main-input" id="name" required>
+            <label for="name" class="suspended-label">Nombre completo</label>
+          </div>
+          <label for="message" class="sr-only">mensaje</label>
+          <textarea name="message" id="message" cols="30" rows="4" class="form__message main-input" placeholder="Mensaje" required></textarea>
+          <button class="form__button main-button">Enviar mensaje</button>
+        </fieldset>
+      </form>
+    </section>
+    <section class="credits">
+      <h4 class="credits__title">Todos los derechos reservados a Josttin Mendez
+        <br>
+        2023       
+      </h4>
+    </section>
+  </footer>
+  <script src="../scripts/login.js" type="module"></script>
+</body>
+</html>

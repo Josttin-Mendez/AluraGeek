@@ -1,0 +1,132 @@
+/*===================== HEADER ========= */
+.header__upper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.header__logo {
+  width: 100px;
+}
+.header__logo a {
+  display: flex;
+}
+.header__logo img {
+  width: 100%;
+}
+.search__container,
+.header__close {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+.search__input {
+  background-color: var(--gray-100);
+  padding: 0.90625rem 5rem 0.90625rem 1rem;
+  border-radius: 1.25rem;
+  width: 100%;
+}
+.search__icon {
+  position: absolute;
+  right: 0;
+  padding-right: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--gray-200);
+  cursor: pointer;
+}
+.header__upper.search-active .logo__container {
+  flex-grow: 1;
+}
+.header__upper.search-active .search__container {
+  display: flex;
+  align-items: center;
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+}
+.header__upper.search-active .header__close {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+.header__upper.search-active .header__logo,
+.header__upper.search-active .header__login,
+.header__upper.search-active .header__search {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+.header__login {
+  padding: 0.75rem 3rem;
+  background: transparent;
+  border: 1px solid var(--blue-400);
+  color: var(--blue-400);
+  cursor: pointer;
+  transition: background 0.3s;
+  flex-grow: 1;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1rem;
+}
+.header__login:hover,
+.header__login:active {
+  background-color: var(--blue-200);
+}
+.header__search {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+/*===================== RESPONSIVE ========= */
+@media (min-width: 650px) {
+  .container {
+    padding: 2rem;
+  }
+  .header__upper {
+    padding: 1rem 2rem;
+  }
+  .logo__container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-grow: 0.5;
+  }
+  .header__logo {
+    width: 125px;
+    flex-grow: 0;
+  }
+  .search__container {
+    display: flex;
+    align-items: center;
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+    flex-grow: 0.6;
+  }
+  .header__login {
+    flex-grow: 0;
+    padding: 0.75rem 4rem;
+  }
+  .header__search {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    padding: 2rem 9.5rem;
+  }
+  .header__logo {
+    width: 180px;
+  }
+  .search__input {
+    font-size: 1rem;
+  }
+  .header__login {
+    padding: 1rem 4.375rem;
+  }
+}

@@ -1,0 +1,61 @@
+/*===================== PRODUCTS SECTION ========= */
+.products__title {
+  font-weight: 700;
+}
+.products__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.products__card:nth-child(5),
+.products__card:nth-child(6) {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+.products__card,
+.card__image {
+  width: 100%;
+}
+.products__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.card__title {
+  font: var(--font-14600);
+}
+.card__price {
+  font-weight: 700;
+}
+.card__link {
+  color: var(--blue-400);
+  font: var(--font-14700);
+}
+
+/*===================== RESPONSIVE ========= */
+@media (min-width: 650px) {
+  .card__link {
+    font-size: 1rem;
+  }
+  .products__cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .products__title {
+    font-size: 2rem;
+  }
+  .products:last-child {
+    padding-bottom: 4rem;
+  }
+  .products__card:nth-child(5),
+  .products__card:nth-child(6) {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+  }
+  .products__cards {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}

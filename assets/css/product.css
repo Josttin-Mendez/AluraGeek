@@ -1,0 +1,68 @@
+@import '../css/components/reset-global.css';
+@import '../css/components/header.css';
+@import '../css/components/products.css';
+@import '../css/components/footer.css';
+
+/*===================== PRODUCTS GLOBAL ========= */
+.product__image {
+  width: 100vw;
+  height: 192px;
+  margin: 0 auto;
+}
+.product__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.product__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+.product__title {
+  font: var(--font-22500);
+}
+.product__price {
+  font-weight: 700;
+}
+.product__description {
+  font-size: 14px;
+}
+.products__title {
+  padding: 1rem 0;
+}
+
+/*===================== RESPONSIVE ========= */
+@media (min-width: 650px) {
+  .product {
+    display: grid;
+    gap: 1rem;
+    padding: 2rem;
+    grid-template-columns: 1.1fr 1.9fr;
+    align-items: center;
+  }
+  .product__image {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  .product__content {
+    padding: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .product {
+    padding: 4rem 9.5rem 2rem 9.5rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  .product__price {
+    font-size: 1.375rem;
+  }
+  .product__title {
+    font-size: 52px;
+  }
+  .product__description {
+    font-size: 1rem;
+  }
+}

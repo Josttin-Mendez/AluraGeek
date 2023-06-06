@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alura Geek | Adicionar producto</title>
+  <link rel="stylesheet" href="../fonts/style.css">
+  <link rel="stylesheet" href="../css/admin-add-product.css">
+  <link rel="icon" type="image/png" href="../images/logo-title.png">
+</head>
+<body>
+  <header>
+    <section class="header__upper container">
+      <div class="logo__container">
+        <h1 class="header__logo">
+          <a href="../../index.html">
+            <img src="../images/logo.svg" alt="Logotipo de AluraGeek">
+          </a>       
+        </h1>
+        <div class="search__container">
+          <label for="search" class="sr-only"></label>
+          <input type="text" name="search" id="search" placeholder="¿Qué desea encontrar?" class="search__input">
+          <i class="icon-search search__icon"></i>
+        </div>
+      </div>
+      <a href="./admin-home.html" class="header__login" >Menú productos</a>
+      <i class="icon-search header__search" data-icon-search></i>
+      <i class="icon-close header__close" data-icon-search></i>
+    </section>
+  </header>
+  <main>
+    <form action="" class="add-product container" data-form>
+      <fieldset>
+        <legend class="add-product__title">Adicionar nuevo producto</legend>
+        <div class="add-product__add-image">
+          <div class="add-image__visualization" id="image-container">
+            <div class="add-image__drop">
+              <i class="icon-insert_photo add-image__icon"></i>
+              <p class="image-drop__text">Arrastre imagen para adicionar producto</p>
+            </div>
+          </div>
+          <span>O</span>
+          <div class="add-image__add-file">
+            <label for="add-image" class="add-image__button">
+              <i class="icon-add add-image__icon"></i>
+              Adiciona una imagen para un produto
+            </label>
+            <input type="file" id="add-image" name="add-image" accept=".jpg, .jpeg, .png" data-input-image>
+          </div>
+        </div>
+        <div class="add-product__name">
+          <input type="text" class="main-input form__input" id="name" required maxlength="20" data-input-name>
+          <label for="name" class="suspended-label">Nombre del producto</label>
+        </div>
+        <select name="category" id="category" class="add-product__category" required data-input-category>
+          <option value="" hidden selected disabled>Categorias de productos</option>
+          <option value="starwars">Star Wars</option>
+          <option value="consoles">Consolas</option>
+          <option value="diversos">Otros</option>
+        </select>
+        <div class="add-product__price">
+          <input type="number" class="main-input form__input" id="price" required data-input-price>
+          <label for="price" class="suspended-label">Precio del producto</label>
+        </div>
+        <label for="description" class="sr-only">Descrición del producto</label>
+        <textarea name="description" id="description" cols="30" rows="4" class="add-product__description main-input" placeholder="Descrición del producto" maxlength="150" data-input-description></textarea>
+        <button type="submit" class="add-product__button main-button">Adicionar producto</button>
+      </fieldset>
+    </form>
+  </main>
+  <footer>
+    <section class="contact container">
+        <img src="../images/logo.svg" alt="Logotipo da AluraGeek" class="contact__logo">
+        <ul class="contact__list">
+          <li class="contact__link">
+            <a href="#">Sobre nosotros</a>
+          </li>
+          <li class="contact__link">
+            <a href="#">Política de privacidad</a>
+          </li>
+          <li class="contact__link">
+            <a href="#">Programa de fidelidad</a>
+          </li>
+          <li class="contact__link">
+            <a href="#">Nuestras tiendas</a>
+          </li>
+          <li class="contact__link">
+            <a href="#">Quiero ser franquiciado</a>
+          </li>
+          <li class="contact__link">
+            <a href="#">Anuncie aqui</a>
+          </li>
+        </ul>
+      <form action="" method="post">
+        <fieldset class="contact__form">
+          <legend class="form__title">Contactanos</legend>
+          <div class="input__container">
+            <input type="text" class="form__input main-input" id="name" required>
+            <label for="name" class="suspended-label">Nombre completo</label>
+          </div>
+          <label for="message" class="sr-only">mensaje</label>
+          <textarea name="message" id="message" cols="30" rows="4" class="form__message main-input" placeholder="Mensaje" required></textarea>
+          <button class="form__button main-button">Enviar mensaje</button>
+        </fieldset>
+      </form>
+    </section>
+    <section class="credits">
+      <h4 class="credits__title">Todos los derechos reservados a Josttin Mendez
+        <br>
+        2023       
+      </h4>
+    </section>
+  </footer>
+  <script src="../scripts/add-products-components/add-products-main.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+
+/*===================== RESET ========= */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  color: var(--text-color);
+}
+fieldset {
+  border: none;
+}
+input,
+textarea,
+select {
+  outline: none;
+  border: none;
+  resize: none;
+}
+
+/*===================== GLOBAL ========= */
+:root {
+  /*=== COLORS ==== */
+  --white-color: #FCFCFC;
+  --text-color: #464646;
+  --gray-100: #F5F5F5;
+  --gray-200: #C8C8C8;
+  --gray-200: #A2A2A2;
+  --gray-300: #6B6B6B;
+  --blue-100: #EAF2FD;
+  --blue-200: #D4E4FA;
+  --blue-300: #5595E9;
+  --blue-400: #2A7AE4;
+
+  /*=== FONTS ==== */
+  --font-14600: 600 0.875rem 'Raleway', sans-serif;
+  --font-14700: 700 0.875rem 'Raleway', sans-serif;
+  --font-22500: 500 1.375rem 'Raleway', sans-serif;
+  --font-22700: 700 1.375rem 'Raleway', sans-serif;
+}
+main {
+  background-color: var(--gray-100);
+}
+.container {
+  padding: 1rem;
+}
+.main-button {
+  background-color: var(--blue-400);
+  color: var(--white-color);
+  border: none;
+  font: var(--font-14600);
+  transition: background 0.3s;
+  cursor: pointer;
+}
+.main-button:hover,
+.main-button:active {
+  background-color: var(--blue-300);
+}
+.main-input {
+  border-radius: 4px;
+  border-bottom: 1px solid var(--gray-200);
+  font-size: 1rem;
+  width: 100%;
+  position: relative;
+}
+.suspended-label {
+  position: absolute;
+  top: 30%;
+  left: 0.5rem;
+  color: var(--gray-200);
+  cursor: text;
+}
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
